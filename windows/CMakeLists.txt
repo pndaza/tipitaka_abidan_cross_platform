@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(tipitakaabidan LANGUAGES CXX)
 
+set(PDFIUM_VERSION "4634" CACHE STRING "")
 set(BINARY_NAME "tipitakaabidan")
 
 cmake_policy(SET CMP0063 NEW)

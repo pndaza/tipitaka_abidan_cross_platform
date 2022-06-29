@@ -32,10 +32,10 @@ class DatabaseHelper {
       databasesDirPath = await getDatabasesPath();
     }
     if (Platform.isLinux || Platform.isWindows) {
-      final docDirPath = await getApplicationDocumentsDirectory();
+      final docDirPath = await getApplicationSupportDirectory();
       databasesDirPath = docDirPath.path;
     }
-    
+
     var dbFilePath = join(databasesDirPath, DatabaseInfo.dbName);
 
     var exists = await databaseExists(dbFilePath);
@@ -104,7 +104,8 @@ class DatabaseHelper {
 
   Future<void> _saveDatabaseFromAssets({required String dbFilePath}) async {
     // Copy from asset
-    final dbFileAssetsPath = join(DatabaseInfo.assetsPath, DatabaseInfo.dbName);
+    const dbFileAssetsPath =
+        "${DatabaseInfo.assetsPath}/${DatabaseInfo.dbName}";
     await _copyDatabase(assetsPath: dbFileAssetsPath, destination: dbFilePath);
 
     // save to pref
