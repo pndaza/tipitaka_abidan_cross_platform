@@ -1,0 +1,67 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98e5199a3f70555689be7018ee7f9f878d"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e989d8b2146a8145768218b852a9444a007"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98312b4bc59bbbe2c06c205bf4da6737f5"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9822d37236e53038e5d4380e81026d4039"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9894ba4a7cdb7be1c4888d4ea521006e0f"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e981373b3abfbb3cf79621c62e43ea4b317"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e985da4c327f0c04bebfe6436cb174c3194"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e983786431ce548989b846bbf1a7384f58e"
+    }
+  ],
+  "containerPath" : "/Users/pndaza/Development/Projects/tipitaka_abidan/macos/Pods/Pods.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/pndaza/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/pndaza/Library/Developer/Xcode/DerivedData/Pods-bwnxqcuysdmgjghahovoyahytlnk/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/pndaza/Library/Developer/Xcode/DerivedData/Pods-bwnxqcuysdmgjghahovoyahytlnk/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}
