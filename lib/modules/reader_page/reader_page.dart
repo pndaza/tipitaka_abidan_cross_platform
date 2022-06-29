@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../data/basic_state.dart';
-import '../../packages/pdf_viewer/pdf_controller.dart';
-import '../../packages/pdf_viewer/pdf_page_view.dart';
-import '../../packages/pdf_viewer/pdf_viewer.dart';
+import '../../packages/native_pdf_renderer/pdf_controller.dart';
+import '../../packages/native_pdf_renderer/pdf_page_view.dart';
+import '../../packages/native_pdf_renderer/pdf_viewer.dart';
 import '../../repositories/book_dao.dart';
 import '../../repositories/book_repo.dart';
 import '../../repositories/database.dart';

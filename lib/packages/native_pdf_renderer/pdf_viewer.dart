@@ -14,7 +14,7 @@ class AssetPdfViewer extends StatefulWidget {
   final Axis scrollDirection;
   final PdfController? pdfController;
   final OnPageChanged? onPageChanged;
-  final ColorMode? colorMode;
+  final ColorMode colorMode;
 
   const AssetPdfViewer({
     Key? key,
@@ -98,11 +98,11 @@ class _AssetPdfViewerState extends State<AssetPdfViewer> {
                 alignment: Alignment.center,
                 // margin: EdgeInsets.all(4),
                 padding: const EdgeInsets.all(1),
-                color: _getBackGroundColor(widget.colorMode!),
+                color: _getBackGroundColor(widget.colorMode),
                 child: PdfPageView(
                   pdfDocument: pdfInfo.document,
                   pageNumber: index + 1,
-                  colorMode: widget.colorMode!,
+                  colorMode: widget.colorMode,
                 ),
               );
             }),

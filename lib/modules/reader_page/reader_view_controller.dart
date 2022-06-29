@@ -7,7 +7,7 @@ import '../../data/constants.dart';
 import '../../data/shared_pref_client.dart';
 import '../../models/book.dart';
 import '../../models/favourite.dart';
-import '../../packages/pdf_viewer/pdf_page_view.dart';
+import '../../packages/native_pdf_renderer/pdf_page_view.dart';
 import '../../repositories/book_repo.dart';
 import '../../repositories/favourite_repo.dart';
 
