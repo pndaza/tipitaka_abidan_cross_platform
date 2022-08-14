@@ -1,0 +1,25 @@
+name: asset_pdf_viewer
+description: Pdf Viewer for Desktop (Windows and Mac).
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  native_pdf_renderer: ^4.0.1
+  vs_scrollbar: ^0.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+
+
+flutter:
+
+ 

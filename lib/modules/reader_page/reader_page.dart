@@ -1,11 +1,10 @@
 import 'package:app_popup_menu/app_popup_menu.dart';
+import 'package:asset_pdf_viewer/asset_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../data/basic_state.dart';
-import '../../packages/native_pdf_renderer/pdf_controller.dart';
-import '../../packages/native_pdf_renderer/pdf_page_view.dart';
-import '../../packages/native_pdf_renderer/pdf_viewer.dart';
+
 import '../../repositories/book_dao.dart';
 import '../../repositories/book_repo.dart';
 import '../../repositories/database.dart';

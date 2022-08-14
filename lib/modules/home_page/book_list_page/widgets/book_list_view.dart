@@ -15,10 +15,10 @@ class BookListView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     int crossAxisCount = 2;
-    if (width > 600 && width < 800) {
-      crossAxisCount = 3;
-    } else if (width > 800) {
+    if (width >= 800) {
       crossAxisCount = 4;
+    } else if (width >= 600) {
+      crossAxisCount = 3;
     }
 
     return GridView.builder(

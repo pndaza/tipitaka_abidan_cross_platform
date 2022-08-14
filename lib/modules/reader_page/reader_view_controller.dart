@@ -1,3 +1,4 @@
+import 'package:asset_pdf_viewer/asset_pdf_viewer.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
@@ -7,7 +8,6 @@ import '../../data/constants.dart';
 import '../../data/shared_pref_client.dart';
 import '../../models/book.dart';
 import '../../models/favourite.dart';
-import '../../packages/native_pdf_renderer/pdf_page_view.dart';
 import '../../repositories/book_repo.dart';
 import '../../repositories/favourite_repo.dart';
 
