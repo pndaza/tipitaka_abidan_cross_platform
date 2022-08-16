@@ -1,16 +1,8 @@
-# tipitakaabidan
+# Tipitaka Pali-Myanmar Dictionary
 
-A new Flutter project.
 
-## Getting Started
+## Download
+<a href="https://apps.apple.com/us/app/tipitaka-abidan/id1623605278" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp;releaseDate=1607990400&h=3cf347b703073929b9c0f13748145571" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![photo](screenshoot.webp)

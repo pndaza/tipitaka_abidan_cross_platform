@@ -1,7 +1,7 @@
 import '../models/word.dart';
 
 class WordDao {
-  final tableName = 'word';
+  final tableName = 'words';
   final columnId = 'id';
   final columnWord = 'word';
   final columnBookID = 'book_id';

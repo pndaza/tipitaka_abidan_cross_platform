@@ -2,7 +2,7 @@ class DatabaseInfo {
   DatabaseInfo._();
   static const String assetsPath = 'assets/database';
   static const String dbName = 'tipitaka_abidan.db';
-  static const int dbVersion = 4;
+  static const int dbVersion = 6;
 }
 
 class AssetsInfo {
