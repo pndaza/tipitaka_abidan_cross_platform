@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
-import 'package:path/path.dart';
 
 import '../../widgets/loading_view.dart';
 
@@ -34,6 +33,6 @@ class InfoPage extends StatelessWidget {
   }
 
   Future<String> _loadInfoText() async {
-    return await rootBundle.loadString(join('assets', 'info.html'));
+    return await rootBundle.loadString('assets/info.html');
   }
 }
