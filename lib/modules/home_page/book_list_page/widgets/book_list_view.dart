@@ -34,8 +34,7 @@ class BookListView extends StatelessWidget {
         final book = books[index];
         return BookListTile(
             book: book,
-            path: join(AssetsInfo.baseAssetsPath, AssetsInfo.bookAssetPath,
-                AssetsInfo.bookCoverPath, 'book_cover_${book.id}.png'),
+            path: "${AssetsInfo.baseAssetsPath}/${AssetsInfo.bookAssetPath}/${AssetsInfo.bookCoverPath}/book_cover_${book.id}.png",
             onTap: () => context
                 .read<BookListViewController>()
                 .onBookItemClicked(context, book));
