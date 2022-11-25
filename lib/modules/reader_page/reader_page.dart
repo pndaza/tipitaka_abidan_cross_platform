@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:app_popup_menu/app_popup_menu.dart';
 import 'package:asset_pdf_viewer/asset_pdf_viewer.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +53,16 @@ class ReaderPage extends StatelessWidget {
                     PdfController(intialPage: viewController.initialPage);
                 return Scaffold(
                   appBar: AppBar(
+                    leading: Padding(
+                      padding:
+                          EdgeInsets.only(top: Platform.isMacOS ? 18.0 : 0),
+                      child: IconButton(
+                        onPressed: () => Navigator.pop(context),
+                        icon: const Icon(Icons.arrow_back_ios_new_outlined),
+                      ),
+                    ),
                     title: Text(viewController.bookName),
+                    centerTitle: true,
                     actions: [
                       ValueListenableBuilder<bool>(
                           valueListenable: viewController.isAddedFavourite,

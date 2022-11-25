@@ -66,6 +66,7 @@ class SearchPageViewController {
     _state.value = StateStaus.loading;
     final results = await wordRepository.getWords(
         word: searchWord, searchMode: _searchMode.value);
+        results.sort((a, b) => a.word.compareTo(b.word));
     debugPrint('search results: ${results.length}');
     if (results.isEmpty) {
       _searchResults.clear();

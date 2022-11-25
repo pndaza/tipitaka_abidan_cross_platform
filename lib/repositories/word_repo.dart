@@ -19,15 +19,18 @@ class DatabaseWordRepository extends WordRepository {
   Future<List<Word>> fetchWordlist(String bookId) async {
     final db = await databaseProvider.database;
 
-    final results = await db.query(wordDao.tableName,
-        columns: [
-          wordDao.columnId,
-          wordDao.columnWord,
-          wordDao.columnBookID,
-          wordDao.columnPage,
-        ],
-        where: '${wordDao.columnBookID} = ?',
-        whereArgs: [bookId]);
+    final results = await db.query(
+      wordDao.tableName,
+      columns: [
+        wordDao.columnId,
+        wordDao.columnWord,
+        wordDao.columnBookID,
+        wordDao.columnPage,
+      ],
+      where: '${wordDao.columnBookID} = ?',
+      whereArgs: [bookId],
+      orderBy: wordDao.columnId,
+    );
     return wordDao.fromList(results);
   }
 
@@ -37,15 +40,18 @@ class DatabaseWordRepository extends WordRepository {
     word = searchMode == SearchMode.prefix ? '$word%' : '%$word%';
     final db = await databaseProvider.database;
 
-    final results = await db.query(wordDao.tableName,
-        columns: [
-          wordDao.columnId,
-          wordDao.columnWord,
-          wordDao.columnBookID,
-          wordDao.columnPage,
-        ],
-        where: '${wordDao.columnWord} LIKE ?',
-        whereArgs: [word]);
+    final results = await db.query(
+      wordDao.tableName,
+      columns: [
+        wordDao.columnId,
+        wordDao.columnWord,
+        wordDao.columnBookID,
+        wordDao.columnPage,
+      ],
+      where: '${wordDao.columnWord} LIKE ?',
+      whereArgs: [word],
+      orderBy: wordDao.columnId,
+    );
     return wordDao.fromList(results);
   }
 }

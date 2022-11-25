@@ -14,6 +14,9 @@ class BookListView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     int crossAxisCount = 2;
+        if (width >= 1200) {
+      crossAxisCount = 5;
+    } else
     if (width >= 800) {
       crossAxisCount = 4;
     } else if (width >= 600) {

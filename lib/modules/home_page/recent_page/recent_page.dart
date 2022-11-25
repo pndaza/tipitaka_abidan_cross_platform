@@ -22,7 +22,7 @@ class RecentPage extends StatelessWidget {
               appBar: const RecentPageAppBar(),
               body: ValueListenableBuilder<StateStaus>(
                   valueListenable:
-                      context.watch<RecentPageViewController>().state,
+                      context.read<RecentPageViewController>().state,
                   builder: (_, state, __) {
                     if (state == StateStaus.loading) {
                       return const LoadingView();
@@ -32,7 +32,9 @@ class RecentPage extends StatelessWidget {
                         child: Text('ကြည့်ခဲ့သောပုဒ်များ\nမရှိသေးပါ'),
                       );
                     }
-                    return const RecentlistView();
+                    return RecentlistView(
+                        recents:
+                            context.read<RecentPageViewController>().recents);
                   }),
             ));
   }

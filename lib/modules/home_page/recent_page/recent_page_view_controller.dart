@@ -46,8 +46,7 @@ class RecentPageViewController {
     _recents.addAll(await recentRepository.getRecents());
     if (recents.isEmpty) {
       _state.value = StateStaus.nodata;
-    }
-    {
+    } else {
       _state.value = StateStaus.data;
     }
   }
@@ -108,10 +107,12 @@ class RecentPageViewController {
 
   Future<void> onDeleteActionClicked(int index) async {
     _state.value = StateStaus.loading;
+    // await Future.delayed(Duration(milliseconds: 10));
     // deleting record
     await recentRepository.delete(_recents[index]);
     // deleting from loaded
     _recents.removeAt(index);
+    // update state
     if (_recents.isEmpty) {
       _state.value = StateStaus.nodata;
     } else {

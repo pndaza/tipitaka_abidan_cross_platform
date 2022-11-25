@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -23,10 +25,14 @@ class RecentPageAppBar extends StatelessWidget implements PreferredSizeWidget {
             );
           } else {
             return AppBar(
-              leading: IconButton(
-                  onPressed: controller.onCancelButtonClicked,
-                  icon: const Icon(Icons.cancel_outlined)),
+              leading: Padding(
+                padding: EdgeInsets.only(top: Platform.isMacOS ? 18.0 : 0),
+                child: IconButton(
+                    onPressed: controller.onCancelButtonClicked,
+                    icon: const Icon(Icons.cancel_outlined)),
+              ),
               title: Text('${MmNumber.get(selectedItems.length)} ခု မှတ်ထား'),
+              centerTitle: true,
               actions: <Widget>[
                 // select all button
                 IconButton(

@@ -63,16 +63,17 @@ class FavouriteDatabaseRepository extends FavouriteRepository {
 
 
 class PrefFavouriteRepository implements FavouriteRepository {
+
   @override
   Future<void> delete(Favourite favourite) async {
-    final recents = await getFavourites();
-    recents.removeWhere((element) => element.wordId == favourite.wordId);
-    SharedPreferenceClient.recents = json.encode(recents);
+    final favourites = await getFavourites();
+    favourites.removeWhere((element) => element.wordId == favourite.wordId);
+    SharedPreferenceClient.favourites = json.encode(favourites);
   }
 
   @override
   Future<void> deleteAll() async {
-    SharedPreferenceClient.recents = '{}';
+    SharedPreferenceClient.favourites = '{}';
   }
 
   @override

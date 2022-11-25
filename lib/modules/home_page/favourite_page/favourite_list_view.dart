@@ -14,7 +14,7 @@ class FavouritelistView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = context.read<FavouritePageViewController>();
-    final bookmarks = controller.favourites;
+    // final bookmarks = controller.favourites;
     return ValueListenableBuilder2<bool, List<int>>(
         first: controller.isSelectionMode,
         second: controller.selectedItems,

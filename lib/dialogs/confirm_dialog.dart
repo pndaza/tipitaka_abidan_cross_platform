@@ -60,13 +60,15 @@ class ConfirmDialog extends StatelessWidget {
     ));
   }
 
-  Widget _buildActions(
-      {required String cancellabel,
-      required String okLabel,
-      required BuildContext context}) {
+  Widget _buildActions({
+    required String cancellabel,
+    required String okLabel,
+    required BuildContext context,
+  }) {
     final buttonStyle = ButtonStyle(
-        foregroundColor:
-            MaterialStateProperty.all(Theme.of(context).primaryColor));
+      foregroundColor:
+          MaterialStateProperty.all(Theme.of(context).colorScheme.secondary),
+    );
     return Row(
       children: [
         Expanded(

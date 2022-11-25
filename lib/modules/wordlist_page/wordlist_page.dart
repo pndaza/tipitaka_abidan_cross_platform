@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'dart:io' show Platform;
 
 import '../../data/basic_state.dart';
 import '../../models/book.dart';
@@ -21,6 +22,13 @@ class WordlistPage extends StatelessWidget {
       )..onLoad(),
       builder: (context, __) => Scaffold(
         appBar: AppBar(
+          leading: Padding(
+            padding: EdgeInsets.only(top: Platform.isMacOS ? 18.0 : 0),
+            child: IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.arrow_back_ios_new_outlined),
+            ),
+          ),
           title: Text(book.name),
           centerTitle: true,
         ),
